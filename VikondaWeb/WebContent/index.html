@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"><html>
+<head>
+<meta charset="UTF-8">
+<title>ВИКОНДА - Главная</title>
+<link rel="stylesheet" href="images/template_css.css" type="text/css" />
+
+<script type="text/javascript">
+    	window.onload = setInterval(checkUpdate, 4000);
+
+		function checkUpdate() {
+		var myElement = document.getElementById("flag");
+		
+		var myRequest = new XMLHttpRequest();
+	    myRequest.open('get', "ServletCheck", false);
+	    myRequest.onreadystatechange = function(){
+	        if ((myRequest.readyState == 4) || (myRequest.status == 200)){
+
+	        	var flag = JSON.parse(myRequest.responseText);
+	        	if(flag.Status=="true"){
+	        		myElement.style.backgroundColor = "yellow";
+	            }
+	        }
+	    }
+	    myRequest.send();
+		}
+	    
+        function setFlag(loc) {
+        	var myElement = document.getElementById("flag");
+            	myElement.style.backgroundColor = "teal";
+
+        }
+        function go(loc) {
+        	var myElement = document.getElementById("flag");
+            document.getElementById("iframeID").src = loc;
+            myElement.style.backgroundColor = "#EBF4FA"; 
+        }
+    </script>
+</head>
+<body>
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="315" height="119"><img src="images/dileram_tmpl_logo.jpg" width="315" height="119" /></td>
+                        <td align="right">&nbsp;</td>
+                        <td></td>
+                        <td width="662" rowspan="3" valign="bottom"><img src="images/dileram_tmpl_top_right.jpg" align="top" /></td>
+                    </tr>
+                    <tr>
+                        <td height="31" colspan="2" align="right" background="images/dileram_tmpl_zalog_bg.jpg">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="1%"><img src="images/dileram_tmpl_zalog_bg.jpg" width="131" height="31"></td>
+                                    <td width="1%" align="left"><img src="images/dileram_tmpl_zalog_txt.jpg" width="339" height="31" /></td>
+                                    <td width="97%" bgcolor="#0054a5"></td>
+                                    <td width="1%" align="right"><img src="images/dileram_tmpl_zalog_right.jpg" width="94" height="31" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="18" colspan="2">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+    
+    <table width="100%" border="0" bgcolor="#ffffff">
+        <tr>
+            <td width="20%" height="450" align="center" valign="top">
+                <br>
+                <a href="javascript:void(0);" onclick=go('GenerateTable.jsp') class="mainlevel" id="flag">load Table of Orders</a>
+                <br><br>
+                
+                
+            </td>
+            <td width="60%"><iframe id="iframeID" src="home.html" width="800" height="600" frameborder="0"></iframe></td>
+            <td width="20%"></td>
+        </tr>
+    </table>  
+</body>
+</html>

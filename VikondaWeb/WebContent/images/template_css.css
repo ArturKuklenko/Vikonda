@@ -1,0 +1,44 @@
+body {color            : #808285;
+padding          : 0px;
+background-color : #FFFFFF;
+font-family      : Arial;
+font-size        : 12px;
+margin-bottom    : 0px;
+margin-top: 0em;
+margin-left: 0em;
+margin-right: 0em;}
+
+td, tr, p, div {font-family      : Arial;
+font-size        : 12px;
+color            : #6D6F71;}
+
+a.mainlevel {
+    font-size:14px;
+    color: black;
+	background-color:#EBF4FA;
+    padding-bottom:6px;
+    padding-top:6px;
+    padding-left:30px;
+    padding-right:30px;
+    position:relative;
+    text-decoration:none;
+    font-family      : Arial;
+    font-weight: bold;
+}
+
+a.mainlevel:hover {
+	background-color:#2B65EC;
+    color: white;
+}
+a.mainlevel:active {
+	background-color:#2B65EC;
+    color: white;
+}
+
+
+
+
+
+
+
+

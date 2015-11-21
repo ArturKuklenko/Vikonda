@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vikonda.TableController">
+   <children>
+      <Button layoutX="519.0" layoutY="355.0" mnemonicParsing="false" onAction="#saveOrders" prefHeight="25.0" prefWidth="69.0" styleClass="btn-2" text="save" textFill="#b88484" />
+      <TextField fx:id="orderText" layoutX="8.0" layoutY="317.0" prefHeight="27.0" prefWidth="69.0" promptText="Order" style="-fx-background-color: #A0A0A0; -fx-border-color: #000000; -fx-background-radius: 6; -fx-border-radius: 6;" />
+      <TextField fx:id="sumText" layoutX="209.0" layoutY="317.0" prefHeight="27.0" prefWidth="98.0" promptText="sum" style="-fx-background-color: #A0A0A0; -fx-border-color: #000000; -fx-background-radius: 6; -fx-border-radius: 6;" />
+      <TableView fx:id="OrderTable" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #A0A0A0;">
+        <columns>
+            <TableColumn fx:id="orderNumber" onEditCommit="#addOrder" prefWidth="89.0" text="Order #" />
+            <TableColumn fx:id="orderProfile" prefWidth="129.0" text="profile" />
+            <TableColumn fx:id="orderSum" prefWidth="117.0" text="sum" />
+            <TableColumn fx:id="orderStatus" prefWidth="143.0" text="Order status" />
+            <TableColumn fx:id="orderDate" prefWidth="110.0" text="Delivery date" />
+        </columns>
+      </TableView>
+      <Button layoutX="434.0" layoutY="355.0" mnemonicParsing="false" onAction="#loadOrders" prefHeight="25.0" prefWidth="69.0" styleClass="btn-2" text="load" textFill="#b88484" />
+      <Button layoutX="8.0" layoutY="355.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="25.0" prefWidth="69.0" styleClass="btn-2" text="add" textFill="#b88484" />
+      <Button layoutX="519.0" layoutY="212.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="25.0" prefWidth="69.0" styleClass="btn-2" text="delete" textFill="#b88484" />
+      <ComboBox fx:id="profileBox" layoutX="83.0" layoutY="318.0" prefHeight="25.0" prefWidth="119.0" />
+      <ComboBox fx:id="statusBox" layoutX="316.0" layoutY="318.0" prefHeight="25.0" prefWidth="145.0" />
+      <Label fx:id="labelInfo2" layoutX="14.0" layoutY="207.0" textFill="#9a0f0f" />
+      <DatePicker fx:id="date" layoutX="469.0" layoutY="318.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #A0A0A0;" />
+      <Button layoutX="83.0" layoutY="355.0" mnemonicParsing="false" onAction="#setRow" prefHeight="25.0" prefWidth="90.0" styleClass="btn-2" text="select row" textFill="#b88484" />
+      <Button fx:id="changeRowButton" layoutX="189.0" layoutY="355.0" mnemonicParsing="false" onAction="#changeRow" prefHeight="25.0" prefWidth="69.0" styleClass="btn-3" text="change" textFill="#ee2727" />
+   </children>
+</Pane>

@@ -1,0 +1,41 @@
+.btn {
+  -fx-background-color:  #303030;
+    -fx-background-radius: 60;
+    -fx-border: 1;
+    -fx-border-color: #0D860D;
+    -fx-border-radius: 60;
+}
+.btn:hover {
+ -fx-background-color: #39352a;
+    -fx-background-radius: 60;
+    -fx-border: 1;
+    -fx-border-color: #0D860D;
+    -fx-border-radius: 60;
+}
+.btn:pressed {
+ -fx-background-color: #3e3b32;
+    -fx-background-radius: 60;
+    -fx-border: 1;
+    -fx-border-color: #0D860D;
+    -fx-border-radius: 60;
+}
+
+.btn-2 {
+  -fx-background-color: #303030;
+}
+.btn-2:hover {
+ -fx-background-color: #333300;
+}
+.btn-2:pressed {
+ -fx-background-color: #939300;
+}
+
+.btn-3 {
+  -fx-background-color: #303030;
+}
+.btn-3:hover {
+ -fx-background-color: #333300;
+}
+.btn-3:pressed {
+ -fx-background-color: #939300;
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="LogIn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vikonda.LoginController">
+   <children>
+      <Button layoutX="177.0" layoutY="152.0" mnemonicParsing="false" onAction="#validate" prefHeight="27.0" prefWidth="151.0" styleClass="btn" stylesheets="@Login.css" text="Log in" textFill="#b88484" />
+      <TextField fx:id="userField" layoutX="177.0" layoutY="38.0" prefHeight="27.0" prefWidth="151.0" promptText="username" style="-fx-background-color: #A0A0A0; -fx-border-color: #000000; -fx-background-radius: 6; -fx-border-radius: 6;" />
+      <Label layoutX="53.0" layoutY="42.0" text="Username" textFill="#b88484" />
+      <Label layoutX="53.0" layoutY="87.0" text="Password" textFill="#b88484" />
+      <Label layoutX="177.0" layoutY="6.0" style="-: #404040;" text="*default user user" textFill="#9a0f0f" />
+      <PasswordField fx:id="passwordBox" layoutX="177.0" layoutY="82.0" prefHeight="27.0" prefWidth="151.0" promptText="password" style="-fx-background-color: #A0A0A0; -fx-border-color: #000000; -fx-background-radius: 6; -fx-border-radius: 6;" />
+      <Label fx:id="labelInfo" layoutX="177.0" layoutY="109.0" textFill="#9a0f0f" />
+   </children>
+</Pane>
